@@ -1,3 +1,4 @@
+package br.ufrn.ws.angprojservice.resource;
 
 
 import org.springframework.context.annotation.Bean;
