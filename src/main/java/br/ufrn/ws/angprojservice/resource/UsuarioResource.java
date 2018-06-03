@@ -28,7 +28,7 @@ public class UsuarioResource {
 
 	@GetMapping //irá processar requisições que utilizam o método GET do HTTP
 	//retorna todos os usuários
-	public List<Usuario> recuperarUsuarios(){
+	public List<Usuario> listar(){
 		return usuarioRepository.findAll();
 	}
 	@PostMapping(consumes="application/json",produces="application/json") //adiciona um usuário
@@ -37,7 +37,7 @@ public class UsuarioResource {
 		return usuarioRepository.save(usuario);
 	}
 	@GetMapping("/{idUsuario}")//busca usuario por id
-	public Usuario usuarioId (@PathVariable Long idUsuario) {
+	public Usuario listarId (@PathVariable Long idUsuario) {
 		return usuarioRepository.findById(idUsuario).get();
 	}
 	@PutMapping//atualizando um usuario existente
