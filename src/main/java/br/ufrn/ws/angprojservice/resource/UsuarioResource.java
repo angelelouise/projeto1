@@ -41,9 +41,9 @@ public class UsuarioResource {
 	public Usuario listarId (@PathVariable Long idUsuario) {
 		return usuarioRepository.findById(idUsuario).get();
 	}
-	@GetMapping("list/{user}")//busca usuario por user
-	public Usuario listarUser (@PathVariable String user) {
-		return  (Usuario) usuarioRepository.findByUser(user);
+	@GetMapping("list/{usuario}")//busca usuario por user
+	public Usuario listarUser (@PathVariable String usuario) {
+		return  (Usuario) usuarioRepository.findByUser(usuario);
 	}
 	@PutMapping//atualizando um usuario existente
 	@ResponseStatus(code=HttpStatus.OK)
