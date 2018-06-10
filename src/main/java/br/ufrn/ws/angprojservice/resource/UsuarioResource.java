@@ -50,7 +50,7 @@ public class UsuarioResource {
 	public Usuario atualizar (@Valid @RequestBody Usuario usuario) {
 		return usuarioRepository.save(usuario);
 	}
-	@DeleteMapping //excluindo um usuário
+	@DeleteMapping("/{idUsuario}") //excluindo um usuário
 	@ResponseStatus(code=HttpStatus.NO_CONTENT)
 	public void remover(@PathVariable Long idUsuario) {
 		usuarioRepository.deleteById(idUsuario);
